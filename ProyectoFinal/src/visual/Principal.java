@@ -40,6 +40,7 @@ public class Principal extends JFrame {
 	 * Create the frame.
 	 */
 	public Principal() {
+		setTitle("Tienda de Componentes");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 768, 496);
 		contentPane = new JPanel();
@@ -111,9 +112,6 @@ public class Principal extends JFrame {
 		
 		JMenu mnNewMenu_7 = new JMenu("Cuentas y Ordenes de Compra");
 		mnNewMenu_5.add(mnNewMenu_7);
-		
-		JMenuItem mntmNewMenuItem_9 = new JMenuItem("Estado de Cuentas");
-		mnNewMenu_7.add(mntmNewMenuItem_9);
 		
 		JMenuItem mntmNewMenuItem_12 = new JMenuItem("Generar Orden de Compra");
 		mnNewMenu_7.add(mntmNewMenuItem_12);
