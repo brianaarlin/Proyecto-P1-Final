@@ -6,19 +6,17 @@ public abstract class Componente {
 	protected String modelo;
 	protected String marca;
 	protected float precioVenta;
-	protected float precioCompra;
 	protected int cantMinima;
 	protected int cantMaxima;
 	protected int cantReal;
 	
-	public Componente(String serie, String modelo, String marca, /*int cantidad,*/ float precioVenta, float precioCompra,
+	public Componente(String serie, String modelo, String marca, float precioVenta,
 			int cantMinima, int cantMaxima, int cantReal) {
 		super();
 		this.serie = serie;
 		this.modelo = modelo;
 		this.marca = marca;
 		this.precioVenta = precioVenta;
-		this.precioCompra = precioCompra;
 		this.cantMinima = cantMinima;
 		this.cantMaxima = cantMaxima;
 		this.cantReal = cantReal;
@@ -56,13 +54,6 @@ public abstract class Componente {
 		this.precioVenta = precioVenta;
 	}
 
-	public float getPrecioCompra() {
-		return precioCompra;
-	}
-
-	public void setPrecioCompra(float precioCompra) {
-		this.precioCompra = precioCompra;
-	}
 
 	public int getCantMinima() {
 		return cantMinima;
@@ -87,5 +78,16 @@ public abstract class Componente {
 	public void setCantReal(int cantReal) {
 		this.cantReal = cantReal;
 	}
+
+	public boolean chequearpedido()  {
+		boolean res = false;
+		if(cantReal<cantMinima) {
+			res = true;
+		}
+		
+		return res;
+	}
+
+	
 
 }

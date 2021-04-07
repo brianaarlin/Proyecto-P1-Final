@@ -2,28 +2,28 @@ package logico;
 
 public class MemoriaRAM extends Componente {
 
-	private float cantidadMem;
-	private String tipo;
+	private float cantMemoria;
+	private String tipomemoria;
 	private boolean Gb;
 		
 	public MemoriaRAM(String serie, String modelo, String marca, float precioVenta, float precioCompra, int cantMinima,
-			int cantMaxima, int cantReal, float cantidadMem, String tipo, boolean gb) {
-		super(serie, modelo, marca, precioVenta, precioCompra, cantMinima, cantMaxima, cantReal);
-		this.cantidadMem = cantidadMem;
-		this.tipo = tipo;
+			int cantMaxima, int cantReal, float cantMemoria, String tipomemoria, boolean gb) {
+		super(serie, modelo, marca, precioVenta, cantMinima, cantMaxima, cantReal);
+		this.cantMemoria = cantMemoria;
+		this.tipomemoria = tipomemoria;
 		Gb = gb;
 	}
 	public float getCantidadMem() {
-		return cantidadMem;
+		return cantMemoria;
 	}
 	public void setCantidadMem(float cantidadMem) {
-		this.cantidadMem = cantidadMem;
+		this.cantMemoria = cantidadMem;
 	}
 	public String getTipo() {
-		return tipo;
+		return tipomemoria;
 	}
 	public void setTipo(String tipo) {
-		this.tipo = tipo;
+		this.tipomemoria = tipo;
 	}
 	public boolean isGb() {
 		return Gb;

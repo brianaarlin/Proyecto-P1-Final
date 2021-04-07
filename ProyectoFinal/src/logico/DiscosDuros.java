@@ -2,25 +2,25 @@ package logico;
 
 public class DiscosDuros extends Componente {
 
-	private float almacenamiento;
+	private float capacidad;
 	private boolean Gb;
-	private String conexion;
+	private String tipoconexion;
 
 
 	public DiscosDuros(String serie, String modelo, String marca, float precioVenta, float precioCompra, int cantMinima,
-			int cantMaxima, int cantReal, float almacenamiento, boolean gb, String conexion) {
-		super(serie, modelo, marca, precioVenta, precioCompra, cantMinima, cantMaxima, cantReal);
-		this.almacenamiento = almacenamiento;
+			int cantMaxima, int cantReal, float capacidad, boolean gb, String tipoconexion) {
+		super(serie, modelo, marca, precioVenta, cantMinima, cantMaxima, cantReal);
+		this.capacidad = capacidad;
 		Gb = gb;
-		this.conexion = conexion;
+		this.tipoconexion = tipoconexion;
 	}
 
 	public float getAlmacenamiento() {
-		return almacenamiento;
+		return capacidad;
 	}
 
 	public void setAlmacenamiento(float almacenamiento) {
-		this.almacenamiento = almacenamiento;
+		this.capacidad = almacenamiento;
 	}
 
 	public boolean isGb() {
@@ -32,11 +32,11 @@ public class DiscosDuros extends Componente {
 	}
 
 	public String getConexion() {
-		return conexion;
+		return tipoconexion;
 	}
 
 	public void setConexion(String conexion) {
-		this.conexion = conexion;
+		this.tipoconexion = conexion;
 	}
 	
 

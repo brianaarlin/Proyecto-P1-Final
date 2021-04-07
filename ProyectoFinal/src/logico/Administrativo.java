@@ -2,32 +2,32 @@ package logico;
 
 public class Administrativo extends Persona {
 	
-	private String user;
-	private String pass;
+	private String usuario;
+	private String contrasena;
 	private float sueldo;
 	
-	public Administrativo(String nombre, String cedula, String telefono, String direccion, String user, String pass,
+	public Administrativo(String nombre, String cedula, String telefono, String direccion, String usuario, String contrasena,
 			float sueldo) {
 		super(nombre, cedula, telefono, direccion);
-		this.user = user;
-		this.pass = pass;
+		this.usuario = usuario;
+		this.contrasena = contrasena;
 		this.sueldo = sueldo;
 	}
 
 	public String getUser() {
-		return user;
+		return usuario;
 	}
 
 	public void setUser(String user) {
-		this.user = user;
+		this.usuario = user;
 	}
 
 	public String getPass() {
-		return pass;
+		return contrasena;
 	}
 
 	public void setPass(String pass) {
-		this.pass = pass;
+		this.contrasena = pass;
 	}
 
 	public float getSueldo() {

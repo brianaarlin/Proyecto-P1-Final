@@ -5,17 +5,17 @@ public class Vendedor extends Persona {
 	private String codigo;
 	private float totalventas;
 	private float sueldo;
-	private String usuario;
-	private String contrasena;
+	private String user;
+	private String pass;
 	
 	public Vendedor(String nombre, String cedula, String telefono, String direccion, String codigo, float totalventas,
-			float sueldo, String usuario, String contrasena) {
+			float sueldo, String user, String pass) {
 		super(nombre, cedula, telefono, direccion);
 		this.codigo = codigo;
 		this.totalventas = totalventas;
 		this.sueldo = sueldo;
-		this.usuario = usuario;
-		this.contrasena = contrasena;
+		this.user = user;
+		this.pass = pass;
 	}
 
 	public String getCodigo() {
@@ -43,19 +43,19 @@ public class Vendedor extends Persona {
 	}
 
 	public String getUsuario() {
-		return usuario;
+		return user;
 	}
 
 	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+		this.user = usuario;
 	}
 
 	public String getContrasena() {
-		return contrasena;
+		return pass;
 	}
 
 	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
+		this.pass = contrasena;
 	}
 	
 	

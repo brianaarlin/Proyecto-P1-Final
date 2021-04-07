@@ -4,25 +4,25 @@ import java.util.ArrayList;
 
 public class TarjetaMadre extends Componente {
 
-	private String conector;
+	private String tipoconector;
 	private String tipoRam;
-	private ArrayList<String>conexiones;
+	private ArrayList<String>listaconexiones;
 
 	public TarjetaMadre(String serie, String modelo, String marca, float precioVenta, float precioCompra,
-			int cantMinima, int cantMaxima, int cantReal, String conector, String tipoRam,
-			ArrayList<String> conexiones) {
-		super(serie, modelo, marca, precioVenta, precioCompra, cantMinima, cantMaxima, cantReal);
-		this.conector = conector;
+			int cantMinima, int cantMaxima, int cantReal, String tipoconector, String tipoRam,
+			ArrayList<String> listaconexiones) {
+		super(serie, modelo, marca, precioVenta, cantMinima, cantMaxima, cantReal);
+		this.tipoconector = tipoconector;
 		this.tipoRam = tipoRam;
-		this.conexiones = conexiones;
+		this.listaconexiones = listaconexiones;
 	}
 
 	public String getConector() {
-		return conector;
+		return tipoconector;
 	}
 	
 	public void setConector(String conector) {
-		this.conector = conector;
+		this.tipoconector = conector;
 	}
 	public String getTipoRam() {
 		return tipoRam;
@@ -31,10 +31,10 @@ public class TarjetaMadre extends Componente {
 		this.tipoRam = tipoRam;
 	}
 	public ArrayList<String> getConexiones() {
-		return conexiones;
+		return listaconexiones;
 	}
 	public void setConexiones(ArrayList<String> conexiones) {
-		this.conexiones = conexiones;
+		this.listaconexiones = conexiones;
 	}
 	
 

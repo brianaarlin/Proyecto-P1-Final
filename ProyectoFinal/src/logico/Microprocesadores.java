@@ -2,24 +2,24 @@ package logico;
 
 public class Microprocesadores extends Componente {
 
-	private String conector;
+	private String tipoconector;
 	private float velocidad;
 	private boolean GHz;
 		
 	
 	public Microprocesadores(String serie, String modelo, String marca, float precioVenta, float precioCompra,
-			int cantMinima, int cantMaxima, int cantReal, String conector, float velocidad, boolean gHz) {
-		super(serie, modelo, marca, precioVenta, precioCompra, cantMinima, cantMaxima, cantReal);
-		this.conector = conector;
+			int cantMinima, int cantMaxima, int cantReal, String tipoconector, float velocidad, boolean gHz) {
+		super(serie, modelo, marca, precioVenta, cantMinima, cantMaxima, cantReal);
+		this.tipoconector = tipoconector;
 		this.velocidad = velocidad;
 		GHz = gHz;
 	}
 
 	public String getConector() {
-		return conector;
+		return tipoconector;
 	}
 	public void setConector(String conector) {
-		this.conector = conector;
+		this.tipoconector = conector;
 	}
 	public float getVelocidad() {
 		return velocidad;

@@ -54,7 +54,7 @@ public class RegistroProveedores extends JDialog {
 	 */
 	public RegistroProveedores() {
 		setTitle("Registro de Proveedores");
-		setBounds(100, 100, 725, 517);
+		setBounds(100, 100, 622, 479);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -62,7 +62,7 @@ public class RegistroProveedores extends JDialog {
 		{
 			JPanel panel = new JPanel();
 			panel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-			panel.setBounds(0, 0, 709, 440);
+			panel.setBounds(0, 0, 604, 406);
 			contentPanel.add(panel);
 			panel.setLayout(null);
 			
@@ -71,7 +71,7 @@ public class RegistroProveedores extends JDialog {
 			panel.add(lblNewLabel);
 			
 			textField = new JTextField();
-			textField.setBounds(10, 36, 106, 23);
+			textField.setBounds(10, 30, 130, 23);
 			panel.add(textField);
 			textField.setColumns(10);
 			
@@ -80,16 +80,16 @@ public class RegistroProveedores extends JDialog {
 			panel.add(lblNewLabel_1);
 			
 			textField_1 = new JTextField();
-			textField_1.setBounds(173, 36, 193, 23);
+			textField_1.setBounds(173, 30, 223, 23);
 			panel.add(textField_1);
 			textField_1.setColumns(10);
 			
 			JLabel lblNewLabel_2 = new JLabel("Credito Disponible:");
-			lblNewLabel_2.setBounds(10, 79, 106, 14);
+			lblNewLabel_2.setBounds(10, 65, 106, 14);
 			panel.add(lblNewLabel_2);
 			
 			textField_2 = new JTextField();
-			textField_2.setBounds(10, 100, 106, 23);
+			textField_2.setBounds(10, 85, 130, 23);
 			panel.add(textField_2);
 			textField_2.setColumns(10);
 			
@@ -98,35 +98,35 @@ public class RegistroProveedores extends JDialog {
 			panel.add(lblNewLabel_3);
 			
 			textField_3 = new JTextField();
-			textField_3.setBounds(429, 36, 193, 23);
+			textField_3.setBounds(429, 30, 165, 23);
 			panel.add(textField_3);
 			textField_3.setColumns(10);
 			
 			JLabel lblNewLabel_4 = new JLabel("Direccion:");
-			lblNewLabel_4.setBounds(173, 79, 62, 14);
+			lblNewLabel_4.setBounds(173, 65, 62, 14);
 			panel.add(lblNewLabel_4);
 			
 			textField_4 = new JTextField();
-			textField_4.setBounds(173, 100, 388, 23);
+			textField_4.setBounds(173, 85, 421, 23);
 			panel.add(textField_4);
 			textField_4.setColumns(10);
 			
 			JLabel lblNewLabel_5 = new JLabel("Filtro:");
-			lblNewLabel_5.setBounds(10, 153, 71, 14);
+			lblNewLabel_5.setBounds(10, 130, 71, 14);
 			panel.add(lblNewLabel_5);
 			
 			JComboBox comboBox = new JComboBox();
 			comboBox.setModel(new DefaultComboBoxModel(new String[] {"<Todos>", "Discos Duros", "Memorias RAM", "Tarjeta Madre", "MicroProcesadores"}));
 			comboBox.setToolTipText("");
 			comboBox.setEditable(true);
-			comboBox.setBounds(10, 178, 130, 23);
+			comboBox.setBounds(10, 150, 130, 23);
 			panel.add(comboBox);
 			
 			JPanel panel_1 = new JPanel();
 			panel_1.setForeground(Color.WHITE);
 			panel_1.setBackground(Color.LIGHT_GRAY);
 			panel_1.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Disponibles", TitledBorder.CENTER, TitledBorder.TOP, null, Color.BLACK));
-			panel_1.setBounds(10, 228, 297, 197);
+			panel_1.setBounds(10, 195, 251, 197);
 			panel.add(panel_1);
 			panel_1.setLayout(new BorderLayout(0, 0));
 			
@@ -151,7 +151,7 @@ public class RegistroProveedores extends JDialog {
 			panel_2.setBackground(Color.LIGHT_GRAY);
 			panel_2.setForeground(Color.WHITE);
 			panel_2.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Agregados", TitledBorder.CENTER, TitledBorder.TOP, null, Color.BLACK));
-			panel_2.setBounds(397, 228, 297, 197);
+			panel_2.setBounds(343, 195, 251, 197);
 			panel.add(panel_2);
 			panel_2.setLayout(new BorderLayout(0, 0));
 			
@@ -174,19 +174,20 @@ public class RegistroProveedores extends JDialog {
 			
 			JButton btnNewButton = new JButton("");
 			btnNewButton.setIcon(new ImageIcon("C:\\Users\\HP\\Desktop\\P1\\Proyecto Imagenes\\EN VEREMOS FLECHA DERECHA.png"));
-			btnNewButton.setBounds(317, 270, 62, 33);
+			btnNewButton.setBounds(271, 240, 62, 33);
 			panel.add(btnNewButton);
 			
 			JButton btnNewButton_1 = new JButton("");
 			btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\HP\\Desktop\\P1\\Proyecto Imagenes\\flecha-izquierda.png"));
-			btnNewButton_1.setBounds(317, 345, 62, 33);
+			btnNewButton_1.setBounds(271, 315, 62, 33);
 			panel.add(btnNewButton_1);
 		}
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBounds(0, 402, 606, 38);
+			contentPanel.add(buttonPane);
 			buttonPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
-			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				JButton okButton = new JButton("Registrar");
 				okButton.setActionCommand("OK");

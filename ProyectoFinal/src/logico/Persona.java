@@ -2,10 +2,10 @@ package logico;
 
 public abstract class Persona {
 	
-	private String nombre;
-	private String cedula;
-	private String telefono;
-	private String direccion;
+	protected String nombre;
+	protected String cedula;
+	protected String telefono;
+	protected String direccion;
 	
 	
 	public Persona(String nombre, String cedula, String telefono, String direccion) {
