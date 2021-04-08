@@ -425,6 +425,7 @@ public class IngresoComponentes extends JDialog {
 			panel_RAM.add(lblTipo_Memoria);
 			
 			combo_TipoMemoria = new JComboBox();
+			combo_TipoMemoria.setModel(new DefaultComboBoxModel(new String[] {"<Todas>", "DDR", "DDR-2", "DDR-3"}));
 			combo_TipoMemoria.setBounds(143, 96, 80, 20);
 			panel_RAM.add(combo_TipoMemoria);
 			
@@ -433,6 +434,7 @@ public class IngresoComponentes extends JDialog {
 			panel_RAM.add(lblMemoria);
 			
 			comboMemoria = new JComboBox();
+			comboMemoria.setModel(new DefaultComboBoxModel(new String[] {"<Seleccionar>", "Gb", "Mb"}));
 			comboMemoria.setBounds(143, 149, 80, 20);
 			panel_RAM.add(comboMemoria);
 		}
@@ -449,6 +451,11 @@ public class IngresoComponentes extends JDialog {
 			}
 			{
 				JButton cancelButton = new JButton("Cancelar");
+				cancelButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						dispose();
+					}
+				});
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
 			}
