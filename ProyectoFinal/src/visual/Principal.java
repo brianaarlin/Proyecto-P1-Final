@@ -6,8 +6,12 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+
+
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JSeparator;
 import javax.swing.JMenu;
 import javax.swing.JRadioButtonMenuItem;
@@ -15,6 +19,8 @@ import javax.swing.JPopupMenu;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Principal extends JFrame {
 
@@ -60,6 +66,11 @@ public class Principal extends JFrame {
 		menuBar.add(mnNewMenu);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Facturaci\u00F3n ");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		mnNewMenu.add(mntmNewMenuItem);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Listado Facturas");
@@ -69,33 +80,75 @@ public class Principal extends JFrame {
 		menuBar.add(mnNewMenu_1);
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Ingresar Componente");
+		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				IngresoComponentes a = new IngresoComponentes();
+				a.setVisible(true);
+			}
+		});
 		mnNewMenu_1.add(mntmNewMenuItem_2);
 		
 		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Lista Componentes");
+		mntmNewMenuItem_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ListadoComponentes aux = new ListadoComponentes();
+				aux.setVisible(true);
+			}
+		});
 		mnNewMenu_1.add(mntmNewMenuItem_3);
+		
+		JMenu mnNewMenu_3 = new JMenu("Combos");
+		mnNewMenu_1.add(mnNewMenu_3);
+		
+		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Registrar Combo");
+		mntmNewMenuItem_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				RegCombo aux = new RegCombo();
+				aux.setVisible(true);
+			}
+		});
+		mnNewMenu_3.add(mntmNewMenuItem_5);
+		
+		JMenuItem mntmNewMenuItem_6 = new JMenuItem("Lista de Combos");
+		mntmNewMenuItem_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ListadoComponentes aux = new ListadoComponentes();
+				aux.setVisible(true);
+			}
+		});
+		mnNewMenu_3.add(mntmNewMenuItem_6);
 		
 		JMenu mnNewMenu_2 = new JMenu("Cliente");
 		menuBar.add(mnNewMenu_2);
 		
 		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Lista Cliente");
+		mntmNewMenuItem_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ListadoClientes aux = new ListadoClientes();
+				aux.setVisible(true);
+			}
+		});
 		mnNewMenu_2.add(mntmNewMenuItem_4);
-		
-		JMenu mnNewMenu_3 = new JMenu("Combos");
-		menuBar.add(mnNewMenu_3);
-		
-		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Registrar Combo");
-		mnNewMenu_3.add(mntmNewMenuItem_5);
-		
-		JMenuItem mntmNewMenuItem_6 = new JMenuItem("Lista Combo");
-		mnNewMenu_3.add(mntmNewMenuItem_6);
 		
 		JMenu mnNewMenu_4 = new JMenu("Proveedor");
 		menuBar.add(mnNewMenu_4);
 		
 		JMenuItem mntmNewMenuItem_7 = new JMenuItem("Registrar Proveedor");
+		mntmNewMenuItem_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				RegistroProveedores a = new RegistroProveedores();
+				a.setVisible(true);
+			}
+		});
 		mnNewMenu_4.add(mntmNewMenuItem_7);
 		
 		JMenuItem mntmNewMenuItem_8 = new JMenuItem("Lista Proveedores");
+		mntmNewMenuItem_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ListadoProveedores aux = new ListadoProveedores();
+				aux.setVisible(true);
+			}
+		});
 		mnNewMenu_4.add(mntmNewMenuItem_8);
 		
 		JMenu mnNewMenu_5 = new JMenu("Administracion");
@@ -105,9 +158,21 @@ public class Principal extends JFrame {
 		mnNewMenu_5.add(mnNewMenu_6);
 		
 		JMenuItem mntmNewMenuItem_10 = new JMenuItem("Registrar Empleado");
+		mntmNewMenuItem_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				RegTrabajadores aux = new RegTrabajadores();
+				aux.setVisible(true);
+			}
+		});
 		mnNewMenu_6.add(mntmNewMenuItem_10);
 		
 		JMenuItem mntmNewMenuItem_11 = new JMenuItem("Lista de Empleados");
+		mntmNewMenuItem_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ListadoEmpleados a = new ListadoEmpleados();
+				a.setVisible(true);
+			}
+		});
 		mnNewMenu_6.add(mntmNewMenuItem_11);
 		
 		JMenu mnNewMenu_7 = new JMenu("Cuentas y Ordenes de Compra");
