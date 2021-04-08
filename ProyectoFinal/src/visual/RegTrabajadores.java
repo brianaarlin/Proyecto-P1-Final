@@ -73,7 +73,7 @@ public class RegTrabajadores extends JDialog {
 	 */
 	public RegTrabajadores() {
 		setTitle("Registrar Trabajadores");
-		setBounds(100, 100, 620, 438);
+		setBounds(100, 100, 620, 348);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -81,7 +81,7 @@ public class RegTrabajadores extends JDialog {
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panel.setBounds(0, 0, 604, 361);
+		panel.setBounds(0, 0, 604, 271);
 		contentPanel.add(panel);
 		panel.setLayout(null);
 		
@@ -159,6 +159,7 @@ public class RegTrabajadores extends JDialog {
 				rdbtnAdministracion.setSelected(false);
 				
 				panel_Administracion.setVisible(false);
+				panel_Vendedor.setVisible(true);
 				
 				lblComision.setVisible(true);
 				lblSueldo.setVisible(true);
@@ -169,6 +170,13 @@ public class RegTrabajadores extends JDialog {
 				txtUsuario.setVisible(true);
 				lblContraseña.setVisible(true);
 				txtContraseña.setVisible(true);
+				
+				lblNombre_Usuario.setVisible(false);
+				txtNombreUsuario.setVisible(false);
+				lblContraseña_1.setVisible(false);
+				txtContraseña_1.setVisible(false);
+				lblSueldo_1.setVisible(false);
+				spnSueldo_1.setVisible(false);
 				
 			}
 		});
@@ -182,6 +190,7 @@ public class RegTrabajadores extends JDialog {
 				rdbtnAdministracion.setSelected(true);
 				
 				panel_Vendedor.setVisible(false);
+				panel_Administracion.setVisible(true);
 				
 				lblComision.setVisible(false);
 				lblSueldo.setVisible(false);
@@ -192,6 +201,14 @@ public class RegTrabajadores extends JDialog {
 				txtUsuario.setVisible(false);
 				lblContraseña.setVisible(false);
 				txtContraseña.setVisible(false);
+				
+				lblNombre_Usuario.setVisible(true);
+				txtNombreUsuario.setVisible(true);
+				lblContraseña_1.setVisible(true);
+				txtContraseña_1.setVisible(true);
+				lblSueldo_1.setVisible(true);
+				spnSueldo_1.setVisible(true);
+				
 			}
 		});
 		rdbtnAdministracion.setBounds(341, 13, 136, 23);
@@ -243,8 +260,9 @@ public class RegTrabajadores extends JDialog {
 		
 		panel_Administracion = new JPanel();
 		panel_Administracion.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Informacion Especifica", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_Administracion.setBounds(10, 268, 584, 82);
+		panel_Administracion.setBounds(10, 170, 584, 82);
 		panel.add(panel_Administracion);
+		panel_Administracion.setVisible(false);
 		panel_Administracion.setLayout(null);
 		
 		lblNombre_Usuario = new JLabel("Nombre Usuario:");

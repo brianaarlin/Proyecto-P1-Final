@@ -158,7 +158,6 @@ public class RegistroCliente extends JDialog {
 			rdbtnSi = new JRadioButton("Si");
 			rdbtnSi.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					
 					rdbtnNo.setSelected(false);
 					txtCredito.setVisible(true);
 					lblCredito.setVisible(true);
@@ -184,7 +183,7 @@ public class RegistroCliente extends JDialog {
 			rdbtnNo = new JRadioButton("No");
 			rdbtnNo.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					rdbtnNo.setSelected(false);
+					rdbtnSi.setSelected(false);
 					txtCredito.setVisible(false);
 					lblCredito.setVisible(false);
 					lblDias.setVisible(false);

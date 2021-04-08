@@ -16,6 +16,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.ScrollPaneConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ListadoProveedores extends JDialog {
 
@@ -86,6 +88,11 @@ public class ListadoProveedores extends JDialog {
 				}
 				{
 					JButton cancelButton = new JButton("Cancelar");
+					cancelButton.addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent e) {
+							dispose();
+						}
+					});
 					cancelButton.setActionCommand("Cancel");
 					buttonPane.add(cancelButton);
 				}
