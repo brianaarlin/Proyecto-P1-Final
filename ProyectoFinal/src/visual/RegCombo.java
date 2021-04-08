@@ -19,6 +19,7 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.JComboBox;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.ImageIcon;
 
 public class RegCombo extends JDialog {
 
@@ -133,11 +134,13 @@ public class RegCombo extends JDialog {
 			scrollPane_1.setViewportView(table_1);
 			
 			JButton btnNewButton = new JButton("");
-			btnNewButton.setBounds(279, 220, 60, 23);
+			btnNewButton.setIcon(new ImageIcon("C:\\Users\\HP\\Desktop\\P1\\Proyecto Imagenes\\EN VEREMOS FLECHA DERECHA.png"));
+			btnNewButton.setBounds(279, 213, 60, 30);
 			panel.add(btnNewButton);
 			
 			JButton btnNewButton_1 = new JButton("");
-			btnNewButton_1.setBounds(279, 300, 60, 23);
+			btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\HP\\Desktop\\P1\\Proyecto Imagenes\\flecha-izquierda.png"));
+			btnNewButton_1.setBounds(279, 300, 60, 30);
 			panel.add(btnNewButton_1);
 			
 			
