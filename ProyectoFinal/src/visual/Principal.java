@@ -68,7 +68,8 @@ public class Principal extends JFrame {
 		JMenuItem mntmNewMenuItem = new JMenuItem("Facturaci\u00F3n ");
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				Facturacion aux = new Facturacion();
+				aux.setVisible(true);
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem);
