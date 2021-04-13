@@ -157,7 +157,7 @@ public class Facturacion extends JDialog {
 				aux.setVisible(true);
 			}
 		});
-		btnAnadirArticulo.setIcon(new ImageIcon("C:\\Users\\HP\\Desktop\\P1\\Proyecto Imagenes\\Sin t\u00EDtulo-3.png"));
+		btnAnadirArticulo.setIcon(new ImageIcon("C:\\Users\\HP\\Desktop\\P1\\Proyecto Imagenes\\Sin t\u00EDtulo-2.png"));
 		btnAnadirArticulo.setBounds(27, 16, 187, 97);
 		panel_3.add(btnAnadirArticulo);
 		
