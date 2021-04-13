@@ -8,7 +8,7 @@ public class Vendedor extends Persona {
 	private String user;
 	private String pass;
 	
-	public Vendedor(String nombre, String cedula, String telefono, String direccion, String codigo, float totalventas,
+	public Vendedor(String nombre, String cedula, String telefono, String direccion, float totalventas,
 			float sueldo, String user, String pass) {
 		super(nombre, cedula, telefono, direccion);
 		this.codigo = codigo;

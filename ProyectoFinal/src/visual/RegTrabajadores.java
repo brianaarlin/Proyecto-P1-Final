@@ -11,9 +11,17 @@ import java.awt.Component;
 import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.border.TitledBorder;
+
+import logico.Administrativo;
+import logico.Persona;
+
+import logico.Tienda;
+import logico.Vendedor;
+
 import javax.swing.UIManager;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
@@ -32,24 +40,21 @@ public class RegTrabajadores extends JDialog {
 	private JTextField txtDireccion;
 	private JTextField txtTelefono;
 	private JTextField txtUsuario;
-	private JTextField txtContraseña;
+	private JTextField txtContrasena;
 	private JTextField txtNombreUsuario;
-	private JTextField txtContraseña_1;
+	private JTextField txtContrasena_1;
 	private JLabel lblNombre_Usuario;
-	private JLabel lblContraseña_1;
+	private JLabel lblContrasena_1;
 	private JLabel lblSueldo_1;
 	private JSpinner spnSueldo_1;
 	private JRadioButton rdbtnAdministracion;
 	private JRadioButton rdbtnVendedor;
 	private JPanel panel_Vendedor;
 	private JPanel panel_Administracion;
-	private JLabel lblComision;
 	private JLabel lblSueldo;
-	private JSpinner spnComision;
 	private JSpinner spnSueldo;
-	private JLabel lblNewLabel;
 	private JLabel lblUsuario;
-	private JLabel lblContraseña;
+	private JLabel lblContrasena;
 	
 
 	
@@ -72,12 +77,16 @@ public class RegTrabajadores extends JDialog {
 	 * Create the dialog.
 	 */
 	public RegTrabajadores() {
+		setModal(false);
+		setResizable(false);
 		setTitle("Registrar Trabajadores");
 		setBounds(100, 100, 620, 348);
+		setLocationRelativeTo(null);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
+		
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -161,20 +170,18 @@ public class RegTrabajadores extends JDialog {
 				panel_Administracion.setVisible(false);
 				panel_Vendedor.setVisible(true);
 				
-				lblComision.setVisible(true);
+				
 				lblSueldo.setVisible(true);
-				spnComision.setVisible(true);
 				spnSueldo.setVisible(true);
-				lblNewLabel.setVisible(true);
 				lblUsuario.setVisible(true);
 				txtUsuario.setVisible(true);
-				lblContraseña.setVisible(true);
-				txtContraseña.setVisible(true);
+				lblContrasena.setVisible(true);
+				txtContrasena.setVisible(true);
 				
 				lblNombre_Usuario.setVisible(false);
 				txtNombreUsuario.setVisible(false);
-				lblContraseña_1.setVisible(false);
-				txtContraseña_1.setVisible(false);
+				lblContrasena_1.setVisible(false);
+				txtContrasena_1.setVisible(false);
 				lblSueldo_1.setVisible(false);
 				spnSueldo_1.setVisible(false);
 				
@@ -192,20 +199,18 @@ public class RegTrabajadores extends JDialog {
 				panel_Vendedor.setVisible(false);
 				panel_Administracion.setVisible(true);
 				
-				lblComision.setVisible(false);
+				
 				lblSueldo.setVisible(false);
-				spnComision.setVisible(false);
 				spnSueldo.setVisible(false);
-				lblNewLabel.setVisible(false);
 				lblUsuario.setVisible(false);
 				txtUsuario.setVisible(false);
-				lblContraseña.setVisible(false);
-				txtContraseña.setVisible(false);
+				lblContrasena.setVisible(false);
+				txtContrasena.setVisible(false);
 				
 				lblNombre_Usuario.setVisible(true);
 				txtNombreUsuario.setVisible(true);
-				lblContraseña_1.setVisible(true);
-				txtContraseña_1.setVisible(true);
+				lblContrasena_1.setVisible(true);
+				txtContrasena_1.setVisible(true);
 				lblSueldo_1.setVisible(true);
 				spnSueldo_1.setVisible(true);
 				
@@ -220,43 +225,31 @@ public class RegTrabajadores extends JDialog {
 		panel.add(panel_Vendedor);
 		panel_Vendedor.setLayout(null);
 		
-		lblComision = new JLabel("Comision:");
-		lblComision.setBounds(10, 22, 58, 14);
-		panel_Vendedor.add(lblComision);
-		
 		lblSueldo = new JLabel("Sueldo:");
-		lblSueldo.setBounds(10, 57, 46, 14);
+		lblSueldo.setBounds(9, 40, 46, 14);
 		panel_Vendedor.add(lblSueldo);
 		
-		spnComision = new JSpinner();
-		spnComision.setBounds(78, 22, 58, 20);
-		panel_Vendedor.add(spnComision);
-		
 		spnSueldo = new JSpinner();
-		spnSueldo.setBounds(78, 54, 58, 20);
+		spnSueldo.setBounds(64, 37, 58, 20);
 		panel_Vendedor.add(spnSueldo);
 		
-		lblNewLabel = new JLabel("(Ingresar Porciento de Comision Por Venta)");
-		lblNewLabel.setBounds(146, 25, 249, 14);
-		panel_Vendedor.add(lblNewLabel);
-		
 		lblUsuario = new JLabel("Usuario:");
-		lblUsuario.setBounds(176, 57, 58, 14);
+		lblUsuario.setBounds(145, 40, 58, 14);
 		panel_Vendedor.add(lblUsuario);
 		
 		txtUsuario = new JTextField();
-		txtUsuario.setBounds(229, 54, 132, 20);
+		txtUsuario.setBounds(205, 37, 132, 20);
 		panel_Vendedor.add(txtUsuario);
 		txtUsuario.setColumns(10);
 		
-		lblContraseña = new JLabel("Contrase\u00F1a:");
-		lblContraseña.setBounds(371, 57, 92, 14);
-		panel_Vendedor.add(lblContraseña);
+		lblContrasena = new JLabel("Contrase\u00F1a:");
+		lblContrasena.setBounds(360, 40, 92, 14);
+		panel_Vendedor.add(lblContrasena);
 		
-		txtContraseña = new JTextField();
-		txtContraseña.setBounds(445, 54, 132, 20);
-		panel_Vendedor.add(txtContraseña);
-		txtContraseña.setColumns(10);
+		txtContrasena = new JTextField();
+		txtContrasena.setBounds(440, 37, 132, 20);
+		panel_Vendedor.add(txtContrasena);
+		txtContrasena.setColumns(10);
 		
 		panel_Administracion = new JPanel();
 		panel_Administracion.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Informacion Especifica", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
@@ -274,14 +267,14 @@ public class RegTrabajadores extends JDialog {
 		panel_Administracion.add(txtNombreUsuario);
 		txtNombreUsuario.setColumns(10);
 		
-		lblContraseña_1 = new JLabel("Contrase\u00F1a:");
-		lblContraseña_1.setBounds(10, 57, 86, 14);
-		panel_Administracion.add(lblContraseña_1);
+		lblContrasena_1 = new JLabel("Contrase\u00F1a:");
+		lblContrasena_1.setBounds(10, 57, 86, 14);
+		panel_Administracion.add(lblContrasena_1);
 		
-		txtContraseña_1 = new JTextField();
-		txtContraseña_1.setBounds(110, 51, 132, 20);
-		panel_Administracion.add(txtContraseña_1);
-		txtContraseña_1.setColumns(10);
+		txtContrasena_1 = new JTextField();
+		txtContrasena_1.setBounds(110, 51, 132, 20);
+		panel_Administracion.add(txtContrasena_1);
+		txtContrasena_1.setColumns(10);
 		
 		lblSueldo_1 = new JLabel("Sueldo:");
 		lblSueldo_1.setBounds(288, 23, 61, 14);
@@ -301,6 +294,36 @@ public class RegTrabajadores extends JDialog {
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				JButton okButton = new JButton("Registrar");
+				okButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						Persona aux = null;
+						String nombre = txtNombre.getText();
+						String cedula = txtCedula.getText();
+						String direccion = txtDireccion.getText();
+						String telefono = txtTelefono.getText();
+						if(txtCedula.getText().isEmpty() || txtDireccion.getText().isEmpty() || txtNombre.getText().isEmpty() || txtTelefono.getText().isEmpty()) {
+							JOptionPane.showMessageDialog(null, "Ha dejado espacios vacios en información General!!\nFAVOR DE LLENARLOS CORRECTAMENTE.", "ERROR", JOptionPane.ERROR_MESSAGE);
+						}else {
+						if(rdbtnVendedor.isSelected()) {
+							
+							aux = new Vendedor(nombre, cedula, telefono, direccion, 0, Float.parseFloat(spnSueldo.getValue().toString()), txtUsuario.getText(), txtContrasena.getText());
+							Tienda.getInstance().insertarPersona(aux);
+						}
+						
+						if(rdbtnAdministracion.isSelected()) {
+							String usuario = txtNombreUsuario.getText();
+							String contrasena = txtContrasena_1.getText();
+							float sueldo = Float.parseFloat(spnSueldo_1.getValue().toString());
+							aux = new Administrativo(nombre, cedula, telefono, direccion, usuario, contrasena, sueldo);
+							Tienda.getInstance().insertarPersona(aux);
+						}
+						clear();
+						JOptionPane.showMessageDialog(null, "Se ha ingresado correctamente!!", "Información", JOptionPane.INFORMATION_MESSAGE);
+						}
+					}
+
+					
+				});
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
@@ -318,7 +341,23 @@ public class RegTrabajadores extends JDialog {
 				buttonPane.add(cancelButton);
 			}
 		}
-		
-		
 	}
-}
+		
+		private void clear() {
+			txtNombre.setText("");
+			txtCedula.setText("");
+			txtTelefono.setText("");
+			txtDireccion.setText("");
+			
+			txtContrasena_1.setText("");
+			txtNombreUsuario.setText("");
+			spnSueldo_1.setValue(new Integer(1));
+			
+			
+			spnSueldo.setValue(new Integer(1));
+			txtContrasena.setText("");
+			txtUsuario.setText("");
+			
+		}
+	}
+

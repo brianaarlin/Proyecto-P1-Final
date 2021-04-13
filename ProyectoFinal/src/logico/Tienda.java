@@ -14,10 +14,12 @@ public class Tienda {
 	private int cod_proveedores = 1;
 	private int cod_combos = 1;
 	private int cod_facturas = 1;
+	private int cod_OrdenC = 1;
 	private int totalDisco = 0;
 	private int totalMotherboard = 0;
 	private int totalMemoriaRam = 0;
 	private int totalMicroprocesadores = 0;
+	public static Tienda tienda = null;
 
 	public Tienda() {
 		super();
@@ -29,6 +31,27 @@ public class Tienda {
 		this.ordenes = ordenes;
 
 	}
+	
+	public static Tienda getInstance() {
+		if (tienda == null) {
+			tienda = new Tienda();
+		}
+		return tienda;
+
+	}
+
+	
+	
+	public int getCod_OrdenC() {
+		return cod_OrdenC;
+	}
+
+
+
+	public void setCod_OrdenC(int cod_OrdenC) {
+		this.cod_OrdenC = cod_OrdenC;
+	}
+
 
 	public ArrayList<Combo> getCombos() {
 		return combos;
@@ -36,6 +59,7 @@ public class Tienda {
 
 	public void insertarCombo(Combo combo) {
 		combos.add(combo);
+		setCod_combos(getCod_combos()+1);
 	}
 
 	public void setCombos(ArrayList<Combo> combos) {
@@ -48,6 +72,7 @@ public class Tienda {
 
 	public void insertarComponente(Componente componente) {
 		this.componentes.add(componente);
+		setCod_componente(getCod_componente()+1);
 	}
 
 	public void setComponentes(ArrayList<Componente> componentes) {
@@ -60,6 +85,7 @@ public class Tienda {
 
 	public void insertarFactura(Factura factura) {
 		this.facturas.add(factura);
+		setCod_facturas(getCod_facturas()+1);
 	}
 
 	public void setFacturas(ArrayList<Factura> facturas) {
@@ -68,6 +94,10 @@ public class Tienda {
 
 	public ArrayList<Persona> getPersonas() {
 		return personas;
+	}
+	
+	public void insertarPersona(Persona persona) {
+		this.personas.add(persona);
 	}
 
 	public void setPersonas(ArrayList<Persona> personas) {
@@ -78,8 +108,9 @@ public class Tienda {
 		return proveedores;
 	}
 
-	public void insertarProveedor(Proveedor pro) {
-		proveedores.add(pro);
+	public void insertarProveedor(Proveedor proveedor) {
+		proveedores.add(proveedor);
+		setCod_proveedores(getCod_proveedores()+1);
 	}
 
 	public void setProveedores(ArrayList<Proveedor> proveedores) {
@@ -88,6 +119,11 @@ public class Tienda {
 
 	public ArrayList<OrdenCompra> getOrdenes() {
 		return ordenes;
+	}
+	
+	public void InsertarOrden(OrdenCompra orden) {
+		this.ordenes.add(orden);
+		setCod_OrdenC(getCod_OrdenC()+1);
 	}
 
 	public void setOrdenes(ArrayList<OrdenCompra> ordenes) {
