@@ -11,7 +11,7 @@ public class TarjetaMadre extends Componente {
 	public TarjetaMadre(String serie, String modelo, String marca, float precioVenta, float precioCompra,
 			int cantMinima, int cantMaxima, int cantReal, String tipoconector, String tipoRam,
 			ArrayList<String> listaconexiones) {
-		super(serie, modelo, marca, precioVenta, cantMinima, cantMaxima, cantReal);
+		super(serie, modelo, marca,precioCompra, precioVenta, cantMinima, cantMaxima, cantReal);
 		this.tipoconector = tipoconector;
 		this.tipoRam = tipoRam;
 		this.listaconexiones = listaconexiones;

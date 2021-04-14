@@ -12,11 +12,14 @@ import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.border.TitledBorder;
 
+
 import logico.Administrativo;
+
 import logico.Persona;
 
 import logico.Tienda;
 import logico.Vendedor;
+
 
 import javax.swing.UIManager;
 import java.awt.Color;
@@ -230,6 +233,7 @@ public class RegTrabajadores extends JDialog {
 		panel_Vendedor.add(lblSueldo);
 		
 		spnSueldo = new JSpinner();
+		spnSueldo.setModel(new SpinnerNumberModel(new Float(0), new Float(0), null, new Float(1)));
 		spnSueldo.setBounds(64, 37, 58, 20);
 		panel_Vendedor.add(spnSueldo);
 		
@@ -281,6 +285,7 @@ public class RegTrabajadores extends JDialog {
 		panel_Administracion.add(lblSueldo_1);
 		
 		spnSueldo_1 = new JSpinner();
+		spnSueldo_1.setModel(new SpinnerNumberModel(new Float(0), new Float(0), null, new Float(1)));
 		spnSueldo_1.setBounds(335, 20, 58, 20);
 		panel_Administracion.add(spnSueldo_1);
 		
@@ -296,25 +301,22 @@ public class RegTrabajadores extends JDialog {
 				JButton okButton = new JButton("Registrar");
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						Persona aux = null;
+						
 						String nombre = txtNombre.getText();
 						String cedula = txtCedula.getText();
 						String direccion = txtDireccion.getText();
 						String telefono = txtTelefono.getText();
-						if(txtCedula.getText().isEmpty() || txtDireccion.getText().isEmpty() || txtNombre.getText().isEmpty() || txtTelefono.getText().isEmpty()) {
-							JOptionPane.showMessageDialog(null, "Ha dejado espacios vacios en información General!!\nFAVOR DE LLENARLOS CORRECTAMENTE.", "ERROR", JOptionPane.ERROR_MESSAGE);
+						if(cedula.isEmpty() || direccion.isEmpty() || nombre.isEmpty() || telefono.isEmpty()) {
+							JOptionPane.showMessageDialog(null, "Ha dejado espacios vacios!!\nFAVOR DE LLENARLOS CORRECTAMENTE.", "ERROR", JOptionPane.ERROR_MESSAGE);
 						}else {
 						if(rdbtnVendedor.isSelected()) {
 							
-							aux = new Vendedor(nombre, cedula, telefono, direccion, 0, Float.parseFloat(spnSueldo.getValue().toString()), txtUsuario.getText(), txtContrasena.getText());
+							Persona aux = new Vendedor(nombre, cedula, telefono, direccion, 0, Float.parseFloat(spnSueldo.getValue().toString()), txtUsuario.getText(), txtContrasena.getText());
 							Tienda.getInstance().insertarPersona(aux);
 						}
 						
 						if(rdbtnAdministracion.isSelected()) {
-							String usuario = txtNombreUsuario.getText();
-							String contrasena = txtContrasena_1.getText();
-							float sueldo = Float.parseFloat(spnSueldo_1.getValue().toString());
-							aux = new Administrativo(nombre, cedula, telefono, direccion, usuario, contrasena, sueldo);
+							Persona aux = new Administrativo(nombre, cedula, telefono, direccion, txtNombreUsuario.getText(), txtContrasena_1.getText(),Float.parseFloat(spnSueldo_1.getValue().toString()));
 							Tienda.getInstance().insertarPersona(aux);
 						}
 						clear();
@@ -322,6 +324,8 @@ public class RegTrabajadores extends JDialog {
 						}
 					}
 
+					
+					
 					
 				});
 				okButton.setActionCommand("OK");

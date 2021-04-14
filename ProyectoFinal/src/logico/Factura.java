@@ -111,7 +111,20 @@ public class Factura {
 	}
 	
 	
-	
+	public float calcualBenf() {
+		float total = 0.0f;
+		
+		for(Combo C : combo) {
+			total += (C.calcularprecio()-C.calCompra());
+			
+		}
+		
+		for(Componente comp : componentes) {
+			total += comp.Calbeneficio();
+		}
+		
+		return total;
+	}
 	
 	
 

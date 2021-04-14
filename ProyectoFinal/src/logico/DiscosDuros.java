@@ -9,7 +9,7 @@ public class DiscosDuros extends Componente {
 
 	public DiscosDuros(String serie, String modelo, String marca, float precioVenta, float precioCompra, int cantMinima,
 			int cantMaxima, int cantReal, float capacidad, boolean gb, String tipoconexion) {
-		super(serie, modelo, marca, precioVenta, cantMinima, cantMaxima, cantReal);
+		super(serie, modelo, marca,precioCompra, precioVenta, cantMinima, cantMaxima, cantReal);
 		this.capacidad = capacidad;
 		Gb = gb;
 		this.tipoconexion = tipoconexion;

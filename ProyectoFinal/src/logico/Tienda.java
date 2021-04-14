@@ -4,17 +4,21 @@ import java.util.ArrayList;
 
 public class Tienda {
 
+	private int cod_componente = 1;
+	private int cod_proveedores = 1;
+	private int cod_combos = 1;
+	private int cod_facturas = 1;
+	private int cod_OrdenC = 1;
+	
+	private Persona user= null;
+	
 	private ArrayList<Combo> combos;
 	private ArrayList<Componente> componentes;
 	private ArrayList<Factura> facturas;
 	private ArrayList<Persona> personas;
 	private ArrayList<Proveedor> proveedores;
 	private ArrayList<OrdenCompra> ordenes;
-	private int cod_componente = 1;
-	private int cod_proveedores = 1;
-	private int cod_combos = 1;
-	private int cod_facturas = 1;
-	private int cod_OrdenC = 1;
+
 	private int totalDisco = 0;
 	private int totalMotherboard = 0;
 	private int totalMemoriaRam = 0;
@@ -23,12 +27,12 @@ public class Tienda {
 
 	public Tienda() {
 		super();
-		this.combos = combos;
-		this.componentes = componentes;
-		this.facturas = facturas;
-		this.personas = personas;
-		this.proveedores = proveedores;
-		this.ordenes = ordenes;
+		this.combos = new ArrayList<Combo>();
+		this.componentes = new ArrayList<Componente>();
+		this.facturas = new ArrayList<Factura>();
+		this.personas = new ArrayList<Persona>();
+		this.proveedores = new ArrayList<Proveedor>();
+		this.ordenes = new ArrayList<OrdenCompra>();
 
 	}
 	
@@ -207,6 +211,8 @@ public class Tienda {
 		}
 		return cliente;
 	}
+	
+
 
 	public Factura buscarFactura(String codigo) {
 		Factura factura = null;
@@ -385,6 +391,18 @@ public class Tienda {
 
 		}
 
+	}
+	
+	public void PagarDeudaCliente(Cliente aux) {
+		double total=0;
+		ArrayList<String>s=new ArrayList<String>();
+		for(Factura f : facturas) {
+			if(f.getCliente().equals(aux) && f.isEstado()) {
+				s.add(f.getCod());
+				f.setEstado(false);
+				total+=f.calcualBenf();
+			}
+		}
 	}
 
 }

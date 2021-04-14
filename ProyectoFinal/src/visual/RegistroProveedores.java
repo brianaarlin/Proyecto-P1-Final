@@ -50,6 +50,7 @@ public class RegistroProveedores extends JDialog {
 	private JTextField txtDireccion;
 	public static DefaultTableModel modelo;
 	public static DefaultTableModel modelo_1;
+	private static JComboBox cbxFiltro;
 	public static Object[] fila;
 	private JTable table;
 	private JTable table_1;
@@ -60,7 +61,7 @@ public class RegistroProveedores extends JDialog {
 	private JButton btnAgregar;
 	private JButton btnRemover;
 	private JButton okButton;
-	private JComboBox cbxFiltro;
+	
 
 	/**
 	 * Launch the application.
@@ -148,14 +149,14 @@ public class RegistroProveedores extends JDialog {
 			lblFiltro.setBounds(10, 130, 71, 14);
 			panel.add(lblFiltro);
 
-			JComboBox cbxFiltro = new JComboBox();
+			cbxFiltro  = new JComboBox();
 			cbxFiltro.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					CargarTabla();
 					CargarTablaVendidos();
 				}
 			});
-			cbxFiltro.setModel(new DefaultComboBoxModel(new String[] {"<Todos>", "Discos Duros", "Memorias RAM", "Tarjeta Madre", "MicroProcesadores"}));
+			cbxFiltro.setModel(new DefaultComboBoxModel(new String[] {"<Todos>", "Discos Duros", "Memorias Ram", "Tarjeta Madre", "MicroProcesadores"}));
 			cbxFiltro.setToolTipText("");
 			cbxFiltro.setEditable(true);
 			cbxFiltro.setBounds(10, 150, 130, 23);
