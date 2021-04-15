@@ -34,7 +34,7 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.border.LineBorder;
 
-public class OrdenCompra extends JDialog {
+public class ListadoPedido extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 	private JTable table;
@@ -49,7 +49,7 @@ public class OrdenCompra extends JDialog {
 	private Componente component = null;
 	private Proveedor proveedor = null;
 	
-	public OrdenCompra() {
+	public ListadoPedido() {
 		setTitle("Generar Orden de Compra");
 		setForeground(UIManager.getColor("Button.focus"));
 		setBackground(UIManager.getColor("Button.focus"));
@@ -103,14 +103,14 @@ public class OrdenCompra extends JDialog {
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setBorder(new LineBorder(new Color(184, 134, 11)));
-			buttonPane.setBackground(UIManager.getColor("Button.focus"));
-			buttonPane.setForeground(UIManager.getColor("Button.focus"));
+			buttonPane.setBackground(UIManager.getColor("Panel.background"));
+			buttonPane.setForeground(UIManager.getColor("Panel.background"));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				btnSeleccionar = new JButton("Seleccionar");
-				btnSeleccionar.setForeground(new Color(0, 255, 0));
-				btnSeleccionar.setBackground(UIManager.getColor("Button.focus"));
+				btnSeleccionar.setForeground(Color.BLACK);
+				btnSeleccionar.setBackground(UIManager.getColor("Panel.background"));
 				btnSeleccionar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						
@@ -131,8 +131,8 @@ public class OrdenCompra extends JDialog {
 			}
 			{
 				JButton cancelButton = new JButton("Cancelar");
-				cancelButton.setForeground(new Color(255, 0, 0));
-				cancelButton.setBackground(UIManager.getColor("Button.focus"));
+				cancelButton.setForeground(Color.BLACK);
+				cancelButton.setBackground(UIManager.getColor("Panel.background"));
 				cancelButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						dispose();

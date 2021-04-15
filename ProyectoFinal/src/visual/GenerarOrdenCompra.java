@@ -33,8 +33,9 @@ import java.awt.Toolkit;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.border.LineBorder;
+import java.awt.SystemColor;
 
-public class OrdenCompra extends JDialog {
+public class GenerarOrdenCompra extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 	private JTable table;
@@ -49,20 +50,22 @@ public class OrdenCompra extends JDialog {
 	private Componente component = null;
 	private Proveedor proveedor = null;
 	
-	public OrdenCompra() {
+	public GenerarOrdenCompra() {
 		setTitle("Generar Orden de Compra");
 		setForeground(UIManager.getColor("Button.focus"));
 		setBackground(UIManager.getColor("Button.focus"));
 		setBounds(100, 100, 754, 461);
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(new BorderLayout());
-		contentPanel.setForeground(UIManager.getColor("Button.focus"));
-		contentPanel.setBackground(UIManager.getColor("Button.focus"));
+		contentPanel.setForeground(UIManager.getColor("Panel.background"));
+		contentPanel.setBackground(UIManager.getColor("Panel.background"));
 		contentPanel.setBorder(new LineBorder(new Color(184, 134, 11)));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(new BorderLayout(0, 0));
 		{
 			JPanel panel = new JPanel();
+			panel.setBackground(UIManager.getColor("Panel.background"));
+			panel.setForeground(UIManager.getColor("Button.light"));
 			contentPanel.add(panel, BorderLayout.CENTER);
 			panel.setLayout(new BorderLayout(0, 0));
 			{
@@ -103,14 +106,14 @@ public class OrdenCompra extends JDialog {
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setBorder(new LineBorder(new Color(184, 134, 11)));
-			buttonPane.setBackground(UIManager.getColor("Button.focus"));
-			buttonPane.setForeground(UIManager.getColor("Button.focus"));
+			buttonPane.setBackground(SystemColor.control);
+			buttonPane.setForeground(SystemColor.activeCaptionBorder);
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				btnSeleccionar = new JButton("Seleccionar");
-				btnSeleccionar.setForeground(new Color(0, 255, 0));
-				btnSeleccionar.setBackground(UIManager.getColor("Button.focus"));
+				btnSeleccionar.setForeground(Color.BLACK);
+				btnSeleccionar.setBackground(UIManager.getColor("Button.background"));
 				btnSeleccionar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						
@@ -131,8 +134,8 @@ public class OrdenCompra extends JDialog {
 			}
 			{
 				JButton cancelButton = new JButton("Cancelar");
-				cancelButton.setForeground(new Color(255, 0, 0));
-				cancelButton.setBackground(UIManager.getColor("Button.focus"));
+				cancelButton.setForeground(Color.BLACK);
+				cancelButton.setBackground(UIManager.getColor("Button.background"));
 				cancelButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						dispose();

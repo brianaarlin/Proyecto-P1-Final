@@ -186,9 +186,21 @@ public class Principal extends JFrame {
 		mnNewMenu_5.add(mnNewMenu_7);
 		
 		JMenuItem mntmNewMenuItem_12 = new JMenuItem("Generar Orden de Compra");
+		mntmNewMenuItem_12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GenerarOrdenCompra a = new GenerarOrdenCompra();
+				a.setVisible(true);
+			}
+		});
 		mnNewMenu_7.add(mntmNewMenuItem_12);
 		
 		JMenuItem mntmNewMenuItem_13 = new JMenuItem("Lista Ordenes de Compra");
+		mntmNewMenuItem_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ListadoPedido aux = new ListadoPedido();
+				aux.setVisible(true);
+			}
+		});
 		mnNewMenu_7.add(mntmNewMenuItem_13);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
