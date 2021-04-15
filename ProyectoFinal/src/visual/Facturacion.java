@@ -54,6 +54,7 @@ public class Facturacion extends JDialog {
 	 * Create the dialog.
 	 */
 	public Facturacion() {
+		setTitle("Facturacion");
 		setBounds(100, 100, 836, 545);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));

@@ -2,6 +2,7 @@ package logico;
 
 public class Administrativo extends Persona {
 	
+	
 	private String usuario;
 	private String contrasena;
 	private float sueldo;

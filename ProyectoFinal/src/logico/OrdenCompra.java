@@ -11,9 +11,10 @@ public class OrdenCompra {
 	private int cantidad;
 	private float total;
 	private boolean estado;
+	private Administrativo admin;
 	
 	public OrdenCompra(String codigo, Date fecha, Componente componente, Proveedor proveedor, int cantidad, float total,
-			boolean estado) {
+		  Administrativo admin) {
 		super();
 		this.codigo = codigo;
 		this.fecha = fecha;
@@ -22,7 +23,25 @@ public class OrdenCompra {
 		this.cantidad = cantidad;
 		this.total = total;
 		this.estado = estado;
+		this.admin=admin;
 	}
+
+	
+	
+	
+	public Administrativo getAdmin() {
+		return admin;
+	}
+
+
+
+
+	public void setAdmin(Administrativo admin) {
+		this.admin = admin;
+	}
+
+
+
 
 	public String getCodigo() {
 		return codigo;

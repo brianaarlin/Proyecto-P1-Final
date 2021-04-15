@@ -46,6 +46,14 @@ public class Tienda {
 
 	
 	
+	public Persona getUser() {
+		return user;
+	}
+
+	public void setUser(Persona user) {
+		this.user = user;
+	}
+
 	public int getCod_OrdenC() {
 		return cod_OrdenC;
 	}
