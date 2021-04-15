@@ -60,6 +60,7 @@ public class ListadoFacturacion extends JDialog {
 		contentPanel.setLayout(null);
 		{
 			JPanel panel = new JPanel();
+			panel.setBackground(new Color(240, 255, 255));
 			panel.setBounds(0, 0, 604, 388);
 			contentPanel.add(panel);
 			panel.setLayout(null);
@@ -104,6 +105,7 @@ public class ListadoFacturacion extends JDialog {
 		}
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBackground(new Color(240, 255, 255));
 			buttonPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);

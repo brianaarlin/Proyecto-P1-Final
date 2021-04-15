@@ -34,6 +34,7 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.border.LineBorder;
 import java.awt.SystemColor;
+import javax.swing.border.TitledBorder;
 
 public class GenerarOrdenCompra extends JDialog {
 
@@ -105,9 +106,9 @@ public class GenerarOrdenCompra extends JDialog {
 		}
 		{
 			JPanel buttonPane = new JPanel();
-			buttonPane.setBorder(new LineBorder(new Color(184, 134, 11)));
-			buttonPane.setBackground(SystemColor.control);
-			buttonPane.setForeground(SystemColor.activeCaptionBorder);
+			buttonPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+			buttonPane.setBackground(new Color(240, 255, 255));
+			buttonPane.setForeground(new Color(240, 255, 255));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{

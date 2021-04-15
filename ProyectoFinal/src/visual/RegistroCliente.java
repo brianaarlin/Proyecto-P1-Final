@@ -64,6 +64,7 @@ public class RegistroCliente extends JDialog {
 		contentPanel.setLayout(null);
 		{
 			JPanel panel = new JPanel();
+			panel.setBackground(new Color(240, 255, 255));
 			panel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 			panel.setBounds(0, 0, 361, 291);
 			contentPanel.add(panel);
@@ -156,6 +157,7 @@ public class RegistroCliente extends JDialog {
 		
 			
 			rdbtnSi = new JRadioButton("Si");
+			rdbtnSi.setBackground(new Color(240, 255, 255));
 			rdbtnSi.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					rdbtnNo.setSelected(false);
@@ -181,6 +183,7 @@ public class RegistroCliente extends JDialog {
 		
 			
 			rdbtnNo = new JRadioButton("No");
+			rdbtnNo.setBackground(new Color(240, 255, 255));
 			rdbtnNo.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					rdbtnSi.setSelected(false);
@@ -199,6 +202,7 @@ public class RegistroCliente extends JDialog {
 		
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBackground(new Color(240, 255, 255));
 			buttonPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);

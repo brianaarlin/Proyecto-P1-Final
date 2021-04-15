@@ -16,6 +16,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.ScrollPaneConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class ListadoEmpleados extends JDialog {
 
@@ -48,6 +49,7 @@ public class ListadoEmpleados extends JDialog {
 		contentPanel.setLayout(null);
 		{
 			JPanel panel = new JPanel();
+			panel.setBackground(new Color(240, 255, 255));
 			panel.setBorder(new TitledBorder(null, "Empleados", TitledBorder.CENTER, TitledBorder.TOP, null, null));
 			panel.setBounds(0, 0, 738, 402);
 			contentPanel.add(panel);
@@ -69,6 +71,7 @@ public class ListadoEmpleados extends JDialog {
 			}
 			{
 				JPanel buttonPane = new JPanel();
+				buttonPane.setBackground(new Color(240, 255, 255));
 				buttonPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 				buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 				getContentPane().add(buttonPane, BorderLayout.SOUTH);

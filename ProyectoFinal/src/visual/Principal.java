@@ -21,6 +21,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class Principal extends JFrame {
 
@@ -59,6 +60,8 @@ public class Principal extends JFrame {
 		panel.setLayout(null);
 		
 		JMenuBar menuBar = new JMenuBar();
+		menuBar.setForeground(new Color(240, 255, 255));
+		menuBar.setBackground(new Color(240, 255, 255));
 		menuBar.setBounds(0, 0, 752, 21);
 		panel.add(menuBar);
 		

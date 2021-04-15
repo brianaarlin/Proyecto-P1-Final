@@ -63,6 +63,7 @@ public class OrdenCompra extends JDialog {
 		contentPanel.setLayout(new BorderLayout(0, 0));
 		{
 			JPanel panel = new JPanel();
+			panel.setBackground(new Color(240, 255, 255));
 			contentPanel.add(panel, BorderLayout.CENTER);
 			panel.setLayout(new BorderLayout(0, 0));
 			{
@@ -103,14 +104,14 @@ public class OrdenCompra extends JDialog {
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setBorder(new LineBorder(new Color(184, 134, 11)));
-			buttonPane.setBackground(UIManager.getColor("Button.focus"));
-			buttonPane.setForeground(UIManager.getColor("Button.focus"));
+			buttonPane.setBackground(new Color(240, 255, 255));
+			buttonPane.setForeground(new Color(240, 255, 255));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				btnSeleccionar = new JButton("Seleccionar");
-				btnSeleccionar.setForeground(new Color(0, 255, 0));
-				btnSeleccionar.setBackground(UIManager.getColor("Button.focus"));
+				btnSeleccionar.setForeground(new Color(0, 0, 0));
+				btnSeleccionar.setBackground(UIManager.getColor("Button.background"));
 				btnSeleccionar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						
@@ -131,8 +132,8 @@ public class OrdenCompra extends JDialog {
 			}
 			{
 				JButton cancelButton = new JButton("Cancelar");
-				cancelButton.setForeground(new Color(255, 0, 0));
-				cancelButton.setBackground(UIManager.getColor("Button.focus"));
+				cancelButton.setForeground(Color.BLACK);
+				cancelButton.setBackground(UIManager.getColor("Button.background"));
 				cancelButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						dispose();

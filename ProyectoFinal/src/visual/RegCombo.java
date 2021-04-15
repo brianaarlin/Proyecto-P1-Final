@@ -58,6 +58,7 @@ public class RegCombo extends JDialog {
 		contentPanel.setLayout(null);
 		{
 			JPanel panel = new JPanel();
+			panel.setBackground(new Color(240, 255, 255));
 			panel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Registro",
 					TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 			panel.setBounds(0, 0, 628, 421);
@@ -92,6 +93,7 @@ public class RegCombo extends JDialog {
 			panel.add(comboBox);
 
 			JPanel panel_1 = new JPanel();
+			panel_1.setBackground(new Color(240, 255, 255));
 			panel_1.setBorder(new TitledBorder(null, "Disponibles", TitledBorder.CENTER, TitledBorder.TOP, null, null));
 			panel_1.setBounds(27, 155, 240, 235);
 			panel.add(panel_1);
@@ -114,6 +116,7 @@ public class RegCombo extends JDialog {
 			scrollPane.setViewportView(table);
 			
 			JPanel panel_2 = new JPanel();
+			panel_2.setBackground(new Color(240, 255, 255));
 			panel_2.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Agregados", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 			panel_2.setBounds(351, 155, 240, 235);
 			panel.add(panel_2);
@@ -149,6 +152,7 @@ public class RegCombo extends JDialog {
 			
 			{
 				JPanel buttonPane = new JPanel();
+				buttonPane.setBackground(new Color(240, 255, 255));
 				buttonPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 				buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 				getContentPane().add(buttonPane, BorderLayout.SOUTH);

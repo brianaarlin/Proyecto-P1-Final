@@ -57,16 +57,19 @@ public class Facturacion extends JDialog {
 		setTitle("Facturacion");
 		setBounds(100, 100, 836, 545);
 		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBackground(new Color(240, 255, 255));
 		contentPanel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(240, 255, 255));
 		panel.setBounds(0, 0, 820, 473);
 		contentPanel.add(panel);
 		panel.setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(240, 255, 255));
 		panel_1.setBorder(new TitledBorder(null, "Elementos a Seleccionar", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel_1.setBounds(10, 11, 800, 310);
 		panel.add(panel_1);
@@ -129,12 +132,14 @@ public class Facturacion extends JDialog {
 		panel_1.add(btnNewButton_1);
 		
 		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(new Color(240, 255, 255));
 		panel_2.setBorder(new TitledBorder(null, "Seleccionar Cliente", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel_2.setBounds(10, 349, 239, 113);
 		panel.add(panel_2);
 		panel_2.setLayout(null);
 		
 		JButton btnSeleccionarCliente = new JButton("Seleccionar Cliente");
+		btnSeleccionarCliente.setBackground(new Color(240, 255, 255));
 		btnSeleccionarCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				RegistroCliente aux = new RegistroCliente();
@@ -146,6 +151,7 @@ public class Facturacion extends JDialog {
 		btnSeleccionarCliente.setIcon(new ImageIcon("C:\\Users\\HP\\Desktop\\P1\\Proyecto Imagenes\\REG CLIENTE.png"));
 		
 		JPanel panel_3 = new JPanel();
+		panel_3.setBackground(new Color(240, 255, 255));
 		panel_3.setBorder(new TitledBorder(null, "Agregar Articulo", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel_3.setBounds(269, 349, 239, 113);
 		panel.add(panel_3);
@@ -163,6 +169,7 @@ public class Facturacion extends JDialog {
 		panel_3.add(btnAnadirArticulo);
 		
 		JPanel panel_4 = new JPanel();
+		panel_4.setBackground(new Color(240, 255, 255));
 		panel_4.setBorder(new TitledBorder(null, "Factura", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel_4.setBounds(533, 349, 277, 113);
 		panel.add(panel_4);
@@ -198,6 +205,7 @@ public class Facturacion extends JDialog {
 	}
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBackground(new Color(240, 255, 255));
 			buttonPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);

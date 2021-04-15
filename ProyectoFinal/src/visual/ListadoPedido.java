@@ -63,6 +63,7 @@ public class ListadoPedido extends JDialog {
 		contentPanel.setLayout(new BorderLayout(0, 0));
 		{
 			JPanel panel = new JPanel();
+			panel.setBackground(new Color(240, 255, 255));
 			contentPanel.add(panel, BorderLayout.CENTER);
 			panel.setLayout(new BorderLayout(0, 0));
 			{
@@ -103,8 +104,8 @@ public class ListadoPedido extends JDialog {
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setBorder(new LineBorder(new Color(184, 134, 11)));
-			buttonPane.setBackground(UIManager.getColor("Panel.background"));
-			buttonPane.setForeground(UIManager.getColor("Panel.background"));
+			buttonPane.setBackground(new Color(240, 255, 255));
+			buttonPane.setForeground(new Color(240, 255, 255));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{

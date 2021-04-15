@@ -50,6 +50,7 @@ public class ListadoProveedores extends JDialog {
 		contentPanel.setLayout(null);
 		{
 			JPanel panel = new JPanel();
+			panel.setBackground(new Color(240, 255, 255));
 			panel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Proveedores",
 					TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 			panel.setBounds(0, 0, 754, 389);
@@ -73,6 +74,7 @@ public class ListadoProveedores extends JDialog {
 			}
 			{
 				JPanel buttonPane = new JPanel();
+				buttonPane.setBackground(new Color(240, 255, 255));
 				buttonPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 				buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 				getContentPane().add(buttonPane, BorderLayout.SOUTH);

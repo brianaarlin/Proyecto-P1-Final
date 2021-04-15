@@ -86,18 +86,21 @@ public class RegTrabajadores extends JDialog {
 		setBounds(100, 100, 620, 348);
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBackground(new Color(240, 255, 255));
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(240, 255, 255));
 		panel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel.setBounds(0, 0, 604, 271);
 		contentPanel.add(panel);
 		panel.setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(240, 255, 255));
 		panel_1.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Informacion General", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel_1.setBounds(10, 11, 584, 94);
 		panel.add(panel_1);
@@ -158,12 +161,14 @@ public class RegTrabajadores extends JDialog {
 		txtTelefono.setColumns(10);
 		
 		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(new Color(240, 255, 255));
 		panel_2.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Tipo de Trabajador", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel_2.setBounds(10, 116, 584, 43);
 		panel.add(panel_2);
 		panel_2.setLayout(null);
 		
 		rdbtnVendedor = new JRadioButton("Vendedor");
+		rdbtnVendedor.setBackground(new Color(240, 255, 255));
 		rdbtnVendedor.setSelected(true);
 		rdbtnVendedor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -194,6 +199,7 @@ public class RegTrabajadores extends JDialog {
 		panel_2.add(rdbtnVendedor);
 		
 		rdbtnAdministracion = new JRadioButton("Administracion");
+		rdbtnAdministracion.setBackground(new Color(240, 255, 255));
 		rdbtnAdministracion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				rdbtnVendedor.setSelected(false);
@@ -223,6 +229,7 @@ public class RegTrabajadores extends JDialog {
 		panel_2.add(rdbtnAdministracion);
 		
 		panel_Vendedor = new JPanel();
+		panel_Vendedor.setBackground(new Color(240, 255, 255));
 		panel_Vendedor.setBorder(new TitledBorder(null, "Informacion Especifica", TitledBorder.CENTER, TitledBorder.TOP, null, null));
 		panel_Vendedor.setBounds(10, 170, 584, 82);
 		panel.add(panel_Vendedor);
@@ -294,6 +301,7 @@ public class RegTrabajadores extends JDialog {
 		
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBackground(new Color(240, 255, 255));
 			buttonPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);

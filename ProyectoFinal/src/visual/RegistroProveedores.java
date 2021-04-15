@@ -95,6 +95,7 @@ public class RegistroProveedores extends JDialog {
 		
 		{
 			JPanel panel = new JPanel();
+			panel.setBackground(new Color(240, 255, 255));
 			panel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 			panel.setBounds(0, 0, 604, 406);
 			contentPanel.add(panel);
@@ -164,7 +165,7 @@ public class RegistroProveedores extends JDialog {
 
 			JPanel panel_1 = new JPanel();
 			panel_1.setForeground(Color.WHITE);
-			panel_1.setBackground(Color.LIGHT_GRAY);
+			panel_1.setBackground(new Color(240, 255, 255));
 			panel_1.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Disponibles",
 					TitledBorder.CENTER, TitledBorder.TOP, null, Color.BLACK));
 			panel_1.setBounds(10, 195, 251, 197);
@@ -252,7 +253,7 @@ public class RegistroProveedores extends JDialog {
 			panel.add(btnRemover);
 
 			JPanel panel_2 = new JPanel();
-			panel_2.setBackground(Color.LIGHT_GRAY);
+			panel_2.setBackground(new Color(240, 255, 255));
 			panel_2.setForeground(Color.WHITE);
 			panel_2.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Agregados",
 					TitledBorder.CENTER, TitledBorder.TOP, null, Color.BLACK));
@@ -296,6 +297,7 @@ public class RegistroProveedores extends JDialog {
 		}
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBackground(new Color(240, 255, 255));
 			buttonPane.setBounds(0, 402, 606, 38);
 			contentPanel.add(buttonPane);
 			buttonPane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));

@@ -103,11 +103,13 @@ public class IngresoComponentes extends JDialog {
 		contentPanel.setLayout(null);
 		{
 			JPanel panel = new JPanel();
+			panel.setBackground(new Color(240, 255, 255));
 			panel.setBounds(0, 0, 641, 421);
 			contentPanel.add(panel);
 			panel.setLayout(null);
 			{
 				JPanel panel_1 = new JPanel();
+				panel_1.setBackground(new Color(240, 255, 255));
 				panel_1.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Informaci\u00F3n General", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 				panel_1.setBounds(10, 5, 621, 122);
 				panel.add(panel_1);
@@ -185,12 +187,14 @@ public class IngresoComponentes extends JDialog {
 			}
 			
 			JPanel panel_Componentes = new JPanel();
+			panel_Componentes.setBackground(new Color(240, 255, 255));
 			panel_Componentes.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Componentes", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 			panel_Componentes.setBounds(10, 130, 621, 57);
 			panel.add(panel_Componentes);
 			panel_Componentes.setLayout(null);
 			
 			rdbtnDiscoDuro = new JRadioButton("Disco Duro");
+			rdbtnDiscoDuro.setBackground(new Color(240, 255, 255));
 			rdbtnDiscoDuro.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
@@ -229,6 +233,7 @@ public class IngresoComponentes extends JDialog {
 			panel_Componentes.add(rdbtnDiscoDuro);
 			
 			rdbtnMemoriaRam = new JRadioButton("Memoria Ram");
+			rdbtnMemoriaRam.setBackground(new Color(240, 255, 255));
 			rdbtnMemoriaRam.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
@@ -266,6 +271,7 @@ public class IngresoComponentes extends JDialog {
 			panel_Componentes.add(rdbtnMemoriaRam);
 			
 			rdbtnMicro = new JRadioButton("Microprocesadores");
+			rdbtnMicro.setBackground(new Color(240, 255, 255));
 			rdbtnMicro.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
@@ -304,6 +310,7 @@ public class IngresoComponentes extends JDialog {
 			panel_Componentes.add(rdbtnMicro);
 			
 			rdbtnTarjeta = new JRadioButton("Tarjeta Madre");
+			rdbtnTarjeta.setBackground(new Color(240, 255, 255));
 			rdbtnTarjeta.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
@@ -341,6 +348,7 @@ public class IngresoComponentes extends JDialog {
 			panel_Componentes.add(rdbtnTarjeta);
 			
 			panel_Disco = new JPanel();
+			panel_Disco.setBackground(new Color(240, 255, 255));
 			panel_Disco.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Informaci\u00F3n Espec\u00EDfica", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 			panel_Disco.setBounds(10, 190, 621, 230);
 			panel.add(panel_Disco);
@@ -375,6 +383,7 @@ public class IngresoComponentes extends JDialog {
 			panel_Disco.add(cbxTipoconexion);
 			
 			panelMicro = new JPanel();
+			panelMicro.setBackground(new Color(240, 255, 255));
 			panelMicro.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Informaci\u00F3n Espec\u00EDfica", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 			panelMicro.setBounds(10, 190, 621, 230);
 			panel.add(panelMicro);
@@ -408,6 +417,7 @@ public class IngresoComponentes extends JDialog {
 			panelMicro.add(cbxTipo_Micro);
 			
 			panelTarjeta = new JPanel();
+			panelTarjeta.setBackground(new Color(240, 255, 255));
 			panelTarjeta.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Informaci\u00F3n Espec\u00EDfica", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 			panelTarjeta.setBounds(10, 190, 621, 230);
 			panel.add(panelTarjeta);
@@ -432,6 +442,7 @@ public class IngresoComponentes extends JDialog {
 			panelTarjeta.add(cbxTipoRam);
 			
 			panel_RAM = new JPanel();
+			panel_RAM.setBackground(new Color(240, 255, 255));
 			panel_RAM.setBorder(new TitledBorder(null, "Informacion Adicional", TitledBorder.CENTER, TitledBorder.TOP, null, null));
 			panel_RAM.setBounds(10, 198, 621, 219);
 			panel.add(panel_RAM);
@@ -466,6 +477,7 @@ public class IngresoComponentes extends JDialog {
 		}
 		
 		JPanel Buttonpane = new JPanel();
+		Buttonpane.setBackground(new Color(240, 255, 255));
 		Buttonpane.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		Buttonpane.setBounds(0, 421, 641, 38);
 		contentPanel.add(Buttonpane);
